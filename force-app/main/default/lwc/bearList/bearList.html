@@ -3,6 +3,7 @@
 		<div class="slds-card__body_inner">
 			<!-- Start bear list -->
 			<template if:true={bears.data}>
+				<!--add search input, call handleSearchTermChange function when value changes-->
 				<lightning-input type="search"
 					onchange={handleSearchTermChange}
 					variant="label-hidden"
@@ -34,17 +35,9 @@
 						</lightning-layout-item>
 					</template>
 				</lightning-layout>
-				<!-- No bears found -->
-				<template if:false={hasResults}>
-					<div class="slds-align_absolute-center slds-var-m-vertical_small">
-						This is beary disturbing, we did not find results...
-					</div>
-				</template>
-			</template>
-			<!-- End bear list -->
-			<!-- Data failed to load -->
-			<template if:true={bears.error}>
-				<div class="slds-text-color_error">
+				<!-- No bears found... hasResults is false -->
+-->
+div class="slds-text-color_error">
 					An error occurred while loading the bear list
 				</div>
 			</template>
